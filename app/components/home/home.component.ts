@@ -5,6 +5,7 @@ import {DataSharedService} from "../common/datashared.service";
 import {StorageService} from "../common/storage.service";
 import {QuoteRequest} from "../model/quote.request";
 
+
 @Component({
     moduleId: module.id,
     selector: 'home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
 
     errorMessage: string;
     quoteRequest:QuoteRequest;
+    public submitted: boolean = false;
 
     /**
      *
@@ -23,7 +25,7 @@ export class HomeComponent implements OnInit {
      */
     constructor(private homeService: HomeService, private router : Router, private dataSharedService : DataSharedService,
                 private _cdStorageService:StorageService) {
-      this._cdStorageService.removeSessionStorage('authenticated');
+        this._cdStorageService.removeSessionStorage('authenticated');
     }
 
 
@@ -32,24 +34,7 @@ export class HomeComponent implements OnInit {
      * Initial method for home
      */
     ngOnInit() {
-
-    }
-
-    getQuote() {
-        //call logout service.
-        this.homeService.getQuote(this.quoteRequest).then(
-            responseData => {
-                console.log('logout success');
-                this.router.navigate(['/busSearch']);
-            },
-            error => {
-                console.log('logout failure');
-                this.router.navigate(['/busSearch']);
-            }
-        );
-        /*setTimeout(() => {
-            this.router.navigate(['/home']);
-        }, 10);*/
+        this.quoteRequest = new QuoteRequest();
     }
 
 }

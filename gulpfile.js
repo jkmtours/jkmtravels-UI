@@ -68,14 +68,15 @@ gulp.task('copy:libs', function () {
         'node_modules/es6-shim/es6-shim.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/zone.js/dist/**',
-        'node_modules/reflect-metadata/temp/Reflect.js',
+        'node_modules/reflect-metadata/Reflect.js',
         'node_modules/rxjs/**',
         'node_modules/systemjs/dist/system.src.js',
         'node_modules/@angular/**',
         'node_modules/core-js/client/shim.min.js',
         'node_modules/ng2-bootstrap/**',
         'node_modules/moment/moment.js ',
-        'node_modules/angular2-cookie/**'
+        'node_modules/angular2-cookie/**',
+        'node_modules/ng2-datepicker/**'
     ], {base: './node_modules'})
         .pipe(gulp.dest('build/node_modules'))
 });
@@ -160,6 +161,18 @@ gulp.task('dist:zip', function () {
     return gulp.src('./dist/**')
         .pipe(zip('cd_'+getVersion()+'.zip'))
         .pipe(gulp.dest('./dist'));
+});
+
+var watch = require('gulp-watch');
+
+
+var source = './app',
+    destination = './build';
+
+gulp.task('watch-folder', function() {
+    gulp.src(source + '/**/*', {base: source})
+        .pipe(watch(source, {base: source}))
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('build', function(cb) {

@@ -15,7 +15,8 @@
     'angular2-cookie':            'node_modules/angular2-cookie',
     'ng2-bootstrap':              'node_modules/ng2-bootstrap',
     'core-js-shim':               'node_modules/core-js/client/shim.min.js',
-    'reflect':                    'node_modules/reflect-metadata/temp/Reflect.js',
+    'reflect':                    'node_modules/reflect-metadata/Reflect.js',
+    'ng2-datepicker':             'node_modules/ng2-datepicker/lib-dist',
 
     // angular bundles
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -30,6 +31,7 @@
     // other libraries
     'rxjs':                      'npm:rxjs',
     'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
+    'ng2-datepicker':             'npm:ng2-datepicker/lib-dist/ng2-datepicker.module.js'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
@@ -37,14 +39,16 @@
     'zone.js':                    { main: 'zone.js',  defaultExtension: 'js' },
     'reflect-metadata':           { main: 'Reflect.js',  defaultExtension: 'js' },
     'systemjs':                   { main: 'system.src.js',  defaultExtension: 'js' },
-    app:                        { main: 'main.js',  defaultExtension: 'js' },
+
+    app:                          { main: 'main.js',  defaultExtension: 'js' },
     'angular2-cookie':            { main: 'core.js',  defaultExtension: 'js' },
+    'ng2-datepicker':             {defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
-    'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
+    'angular-in-memory-web-api':  { main: './index.js', defaultExtension: 'js' },
     'headervalues':               { main: 'headervalues.js',  defaultExtension: 'js' },
     'web_properties':             { main: 'web_properties.js',  defaultExtension: 'js' },
     'browserFingerPrint':         { main: 'browserFingerPrint.js',  defaultExtension: 'js' },
-    'ng2-bootstrap':              { main: 'ng2-bootstrap.js',  defaultExtension: 'js' },
+    'ng2-bootstrap':              { main: 'ng2-bootstrap.js',  defaultExtension: 'js' }
 
   };
 

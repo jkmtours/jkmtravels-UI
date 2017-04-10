@@ -48,3 +48,9 @@ Temporary Items
 .idea/jkmtravels-UI.iml
 .idea/workspace.xml
 .idea/modules.xml
+node_modules/
+build/
+dist/
+*.js
+app/images/101.jpg
+*.map

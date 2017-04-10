@@ -8,7 +8,7 @@ import {DataSharedService} from "../../common/datashared.service";
 })
 export class TitlePage {
 
-    title = { value: 'Login' };
+    title = { value: 'Home' };
 
     constructor(private _configService:DataSharedService) {
     }

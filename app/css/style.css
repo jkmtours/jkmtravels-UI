@@ -354,7 +354,7 @@ section.banner {
     font-size: 18px;
     font-family: 'open_sansregular';
     color: #858585;
-    background-image: url('../images/date-icon.png');
+    /*background-image: url('../images/date-icon.png');*/
     background-repeat: no-repeat;
     background-position: 95% 50%;
     margin-bottom: 15px;
@@ -953,4 +953,13 @@ section.tours-main.pad{
     position: relative;
     width:19px;
     height:21px;
+}
+
+.errorhighlight {
+    border: 1px solid #a94442 !important; /* red */
+}
+
+.active {
+    color: #00468c;
+    border-bottom: 3px solid #00468c !important;
 }

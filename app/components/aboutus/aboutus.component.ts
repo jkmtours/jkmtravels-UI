@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
+import {QuoteRequest} from "../model/quote.request";
 
 @Component({
     moduleId: module.id,
@@ -9,6 +10,10 @@ import {Router} from "@angular/router";
 })
 
 export class AboutUsComponent implements OnInit {
+
+    errorMessage: string;
+    quoteRequest:QuoteRequest;
+    public submitted: boolean = false;
 
     /**
      *
@@ -24,6 +29,6 @@ export class AboutUsComponent implements OnInit {
      * Initial method for home
      */
     ngOnInit() {
-
+        this.quoteRequest = new QuoteRequest();
     }
 }

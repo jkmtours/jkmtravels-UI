@@ -1,6 +1,3 @@
-/**
- * Created by fjr323 on 8/11/2016.
- */
 import {Injectable} from "@angular/core";
 
 @Injectable()

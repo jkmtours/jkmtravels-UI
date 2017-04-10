@@ -1,14 +1,14 @@
 import {Injectable} from "@angular/core";
 import "rxjs/add/operator/toPromise";
-import {MPHttpClient} from "../common/mphttpclient.service";
 import {Response} from "@angular/http";
 import {Configuration} from "../../config/app.constants";
 import {QuoteRequest} from "../model/quote.request";
+import {JKMHttpClient} from "../common/jkmhttpclient.service";
 
 @Injectable()
 export class HomeService {
 
-    constructor(private _cdhttp: MPHttpClient) {
+    constructor(private _cdhttp: JKMHttpClient) {
 
     }
 
@@ -19,12 +19,12 @@ export class HomeService {
      */
     getQuote(quoteRequest:QuoteRequest) {
        // let URL = Configuration.APP_URL + '/quote';
-        let URL = "http://localhost:8080/";
+        let URL = "http://localhost:8080/quote";
         return this._cdhttp.post(URL, JSON.stringify(quoteRequest))
             .then(function(response:Response) {
                 let headers = response.headers;
                 return response.json();
-            }, function(error) {
+            }, function(error:any) {
                 let errMsg = (error._body) ? error._body :
                     error.status ? `${error.status} - ${error.statusText}` : 'Server error';
                 console.error(errMsg); // log to console instead

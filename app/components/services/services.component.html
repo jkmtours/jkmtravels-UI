@@ -1,24 +1,9 @@
 <section id="showcase">
     <div class="container">
-        <div class="col-md-1"></div>
+       <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="quote-form">
-                <h1>GET A QUOTE</h1>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" placeholder="From" class="txt-from" />
-                        <input type="text" placeholder="12/01/2016" class="txt-date" />
-                        <input type="text" placeholder="08:15:am" class="txt-time" />
-                        <input type="text" placeholder="group size" class="txt-group" />
-                        <label class="chk-label"><input type="checkbox" class="chkbox" value=""> one way</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" placeholder="to" class="txt-from" />
-                        <input type="text" placeholder="16/01/2016" class="txt-date des" />
-                        <input type="text" placeholder="06:30: am" class="txt-time des" />
-                        <input type="submit" value="go" class="btn-from" />
-                    </div>
-                </div>
+                <quote-form [quoteRequest]="quoteRequest"></quote-form>
             </div>
         </div>
         <div class="col-md-1"></div>

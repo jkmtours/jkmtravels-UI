@@ -1,87 +1,66 @@
+
 <section class="banner">
-    <div class="flexslider">
+   <div class="flexslider">
         <ul class="slides">
             <li>
                 <img src="/app/images/varansi.jpg" alt="image" />
                 <div class="tagline">
-                    <h2>Best in class vehicle for your travel</h2>
-                    <p>
+                   <!-- <h2>Best in class vehicle for your travel</h2>-->
+                    <!--<p>
                         At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
                         We deliver what we promise which makes us different.
-                    </p>
+                    </p>-->
                 </div>
             </li>
             <li>
                 <img src="/app/images/nunukan.jpg" alt="image" />
                 <div class="tagline">
-                    <h2>Best in class vehicle for your travel</h2>
+                  <!--  <h2>Best in class vehicle for your travel</h2>
                     <p>
                         At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
                         We deliver what we promise which makes us different.
-                    </p>
+                    </p>-->
                 </div>
             </li>
             <li>
                 <img src="/app/images/02.jpg" alt="image" />
                 <div class="tagline">
-                    <h2>Best in class vehicle for your travel</h2>
+                    <!--<h2>Best in class vehicle for your travel</h2>
                     <p>
                         At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
                         We deliver what we promise which makes us different.
-                    </p>
+                    </p>-->
                 </div>
             </li>
             <li>
                 <img src="/app/images/03.jpg" alt="image" />
                 <div class="tagline">
-                    <h2>Best in class vehicle for your travel</h2>
+                   <!-- <h2>Best in class vehicle for your travel</h2>
                     <p>
                         At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
                         We deliver what we promise which makes us different.
-                    </p>
+                    </p>-->
                 </div>
             </li>
             <li>
                 <img src="/app/images/Harmandir-Sahib.jpg" alt="image" />
                 <div class="tagline">
-                    <h2>Best in class vehicle for your travel</h2>
+                   <!-- <h2>Best in class vehicle for your travel</h2>
                     <p>
                         At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
                         We deliver what we promise which makes us different.
-                    </p>
+                    </p>-->
                 </div>
             </li>
         </ul>
     </div>
     <div class="container">
-        <!--<div class="tagline">
-            <h2>Best in class vehicle for your travel</h2>
-            <p>
-                At JKM Travels, we will make sure to provide you with the best in class vehicle. We belive in treating our customers like our partners.
-                We deliver what we promise which makes us different.
-            </p>
-        </div>-->
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="quote-main">
-                <h1>get a quote</h1>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" placeholder="From" ng-control="from" class="txt-from" />
-                        <input type="text" placeholder="12/01/2016" class="txt-date" />
-                        <input type="text" placeholder="08:15:am" class="txt-time" />
-                        <input type="text" placeholder="group size" class="txt-group" />
-                        <label class="chk-label"><input type="checkbox" class="chkbox" value=""> one way</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" placeholder="to" ng-control="to" class="txt-from" />
-                        <input type="text" placeholder="16/01/2016" class="txt-date des" />
-                        <input type="text" placeholder="06:30: am" class="txt-time des" />
-                        <input type="submit" value="go" class="btn-from" (click)="getQuote()"/>
-                    </div>
+                <quote-form [quoteRequest]="quoteRequest"></quote-form>
                 </div>
             </div>
-        </div>
         <div class="col-md-1"></div>
     </div>
 </section>

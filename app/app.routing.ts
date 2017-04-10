@@ -5,6 +5,7 @@ import {ServicesComponent} from "./components/services/services.component";
 import {AboutUsComponent} from "./components/aboutus/aboutus.component";
 import {ContactUsComponent} from "./components/contactus/contactus.component";
 import {BusSearchComponent} from "./components/busSearch/busSearch.component";
+import {BookingConfirmationComponent} from "./components/bookingConfirmation/bookingConfirmation.component";
 
 
 const appRoutes: Routes = [
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     {path: 'aboutus', component: AboutUsComponent },
     {path: 'contactus', component: ContactUsComponent },
     {path: 'busSearch', component: BusSearchComponent },
+    {path: 'bookingConfirmation', component: BookingConfirmationComponent},
     {path: '*', redirectTo: '/home' }
 ];
 

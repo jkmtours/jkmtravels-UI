@@ -2,6 +2,8 @@ import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {DataSharedService} from "../common/datashared.service";
 import {StorageService} from "../common/storage.service";
+import {QuoteRequest} from "../model/quote.request";
+import {HomeService} from "../home/home.service";
 
 @Component({
     moduleId: module.id,
@@ -11,6 +13,10 @@ import {StorageService} from "../common/storage.service";
 })
 
 export class ServicesComponent implements OnInit {
+
+    errorMessage: string;
+    quoteRequest:QuoteRequest;
+    public submitted: boolean = false;
 
     /**
      *
@@ -29,6 +35,7 @@ export class ServicesComponent implements OnInit {
      * Initial method for home
      */
     ngOnInit() {
-
+        this.quoteRequest = new QuoteRequest();
     }
+
 }
