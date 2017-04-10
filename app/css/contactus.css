@@ -1,7 +1,11 @@
 body {font-family: 'open_sanslight';}
 
 #showcase {
+    width: 100%;
+    height: auto;
     background: url(/app/images/banner-slider-img1.png) no-repeat center center scroll;
+    background-repeat: no-repeat;
+    background-size: contain;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

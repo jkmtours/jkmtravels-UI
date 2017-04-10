@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import "rxjs/add/operator/toPromise";
+import {JKMHttpClient} from "../common/jkmhttpclient.service";
 import {Response} from "@angular/http";
 import {Configuration} from "../../config/app.constants";
 import {QuoteRequest} from "../model/quote.request";
@@ -7,6 +8,7 @@ import {QuoteRequest} from "../model/quote.request";
 @Injectable()
 export class BusSearchService {
 
+    constructor(private _cdhttp: JKMHttpClient) {
 
     }
 
